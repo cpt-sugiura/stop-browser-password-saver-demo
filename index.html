@@ -18,15 +18,21 @@
             display: flex;
             align-content: center;
         }
+        input{
+            width: 12em;
+        }
     </style>
 </head>
 <body>
-<h1>パスワード保存機能を動かさないパスワード入力欄</h1>
+<h2>パスワード保存機能を動かさないパスワード入力欄</h2>
 <form action="" method="post">
-    <label>パスワード
-        <input type="text" id="input-password" class="password" name="password"
-               autocomplete="off">
-    </label>
+    <label>パスワード<input type="text" id="input-password" class="password" name="password" autocomplete="off"></label>
+    <button type="button" class="toggle-password-display">表示</button>
+    <button type="submit" >送信</button>
+</form>
+<h2>パスワード保存機能を動かすパスワード入力欄</h2>
+<form action="" method="post">
+    <label>パスワード<input type="password" name="password" autocomplete="off"></label>
     <button type="button" class="toggle-password-display">表示</button>
     <button type="submit" >送信</button>
 </form>
