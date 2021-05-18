@@ -1,0 +1,47 @@
+<html>
+<head>
+    <meta charset="UTF-8">
+    <style>
+        @font-face {
+            font-family: 'password';
+            src: url(text-security-disc.ttf);
+        }
+
+        input.password {
+            font-family: 'password';
+        }
+    </style>
+    <title>パスワード保存機能を動かさないパスワード入力欄</title>
+
+    <style>
+        form,label {
+            display: flex;
+            align-content: center;
+        }
+    </style>
+</head>
+<body>
+<h1>パスワード保存機能を動かさないパスワード入力欄</h1>
+<form action="" method="post">
+    <label>パスワード
+        <input type="text" id="input-password" class="password" name="password"
+               autocomplete="off">
+    </label>
+    <button type="button" class="toggle-password-display">表示</button>
+    <button type="submit" >送信</button>
+</form>
+
+<script>
+document.querySelector('.toggle-password-display').addEventListener('click', toggleDisplayStr)
+
+function toggleDisplayStr() {
+    const inputEl = document.querySelector('input#input-password');
+    if (inputEl.classList.contains('password')) {
+        inputEl.classList.remove('password')
+    } else {
+        inputEl.classList.add('password')
+    }
+}
+</script>
+</body>
+</html>
